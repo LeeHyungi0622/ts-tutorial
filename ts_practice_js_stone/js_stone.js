@@ -1,4 +1,5 @@
 "use strict";
+exports.__esModule = true;
 // 영웅 클래스
 var Hero = /** @class */ (function () {
     function Hero(mine) {

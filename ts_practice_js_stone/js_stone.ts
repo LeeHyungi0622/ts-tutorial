@@ -1,11 +1,4 @@
-interface Card {
-  att: number;
-  hp: number;
-  mine: boolean;
-  field: boolean;
-  cost?: number;
-  hero?: boolean;
-}
+import { Card, Player } from './types';
 
 // 영웅 클래스
 class Hero implements Card {
@@ -56,19 +49,7 @@ const b: obj<string> = {
 console.log(a.add(1, 2));
 console.log(b.add('a', 'b'));
 
-interface Player {
-  hero: HTMLDivElement,
-  deck: HTMLDivElement,
-  field: HTMLDivElement,
-  cost: HTMLDivElement,
-  deckData: Card[],
-  heroData?: Card | null,
-  fieldData: Card[],
-  // 공격을 하기 위해서 내 카드를 선택하고 상대방의 카드를 선택해야 한다.
-  // 따라서 null일 수 있다는 가정을 해야 한다.
-  chosenCard?: HTMLDivElement | null,
-  chosenCardData?: Card | null
-}
+
 
 const opponent: Player = {
   hero: document.getElementById('rival-hero') as HTMLDivElement,
